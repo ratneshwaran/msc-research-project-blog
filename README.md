@@ -1,81 +1,58 @@
-# GitHub Pages starter for your MSc research blog post
+# Zero-Shot Cell Annotation and State Prediction in Cancer Single-Cell RNA-seq
 
-This folder contains a ready-to-use **GitHub Pages + Jekyll** starter for your MSc research project write-up.
+This repository hosts the GitHub Pages site for my MSc research project on zero-shot cell annotation and malignant state prediction in cancer single-cell RNA sequencing data.
 
-## Folder structure
+The project explores whether large pre-trained foundation models can generalise to biologically meaningful prediction tasks without task-specific retraining, with a focus on challenging cancer settings where heterogeneity, domain shift, and limited labelled data make annotation difficult.
 
-```text
-.
-├── README.md
-└── docs
-    ├── _config.yml
-    ├── _posts
-    │   └── 2026-03-27-zero-shot-cell-annotation-cancer-single-cell.md
-    ├── about.md
-    ├── assets
-    │   └── images
-    └── index.md
-```
+## Project Overview
 
-## Fastest way to publish
+Single-cell RNA sequencing has become a powerful tool for studying tumour composition, cell identity, and disease progression. However, accurate cell type annotation and state prediction often depend on supervised pipelines that require labelled reference data and may not generalise well across datasets.
 
-1. Create a new GitHub repository.
-2. Upload the contents of this folder to that repository.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose:
-   - **Source:** Deploy from a branch
-   - **Branch:** `main`
-   - **Folder:** `/docs`
-5. Save.
-6. Wait for GitHub Pages to publish your site.
+This project investigates zero-shot approaches using pre-trained biological foundation models to test whether they can:
 
-## What to edit first
+- distinguish malignant from non-malignant cells
+- identify finer malignant cell states
+- generalise across cancer datasets without full retraining
 
-- `docs/_config.yml`
-  - Change the title
-  - Replace `YOUR_GITHUB_USERNAME`
-- `docs/about.md`
-  - Add your bio
-- `docs/_posts/2026-03-27-zero-shot-cell-annotation-cancer-single-cell.md`
-  - Add repo links
-  - Tighten the wording to match your personal style
-  - Add or remove figures
+The broader aim is to understand both the promise and the limitations of zero-shot transfer in cancer single-cell analysis.
 
-## Optional: rename the post URL
+## Models Explored
 
-Rename this file:
+This work evaluates multiple pre-trained models designed for biological representation learning, including:
 
-```text
-docs/_posts/2026-03-27-zero-shot-cell-annotation-cancer-single-cell.md
-```
+- **Geneformer-V1**
+- **Geneformer-V2-Cancer**
+- **LangCell**
 
-Example:
+These models were compared on their ability to transfer to downstream cancer annotation tasks under a zero-shot setting.
+
+## Research Questions
+
+The project was guided by questions such as:
+
+1. Can pre-trained foundation models separate malignant from non-malignant cells in unseen cancer datasets?
+2. Can these models capture more fine-grained malignant cell states beyond broad class separation?
+3. How robust are their learned representations under dataset shift and biological heterogeneity?
+4. What are the practical limitations of zero-shot annotation in cancer single-cell genomics?
+
+## Key Findings
+
+Some of the main takeaways from the project include:
+
+- Zero-shot foundation models can provide useful biological signal for broad classification tasks
+- Performance is stronger for coarse-grained discrimination than for subtle malignant state prediction
+- Generalisation remains challenging across datasets, especially where tumour state definitions are noisy or biologically overlapping
+- Representation quality varies across models, showing that domain-specific pretraining matters
+
+Overall, the results suggest that zero-shot approaches are promising, but not yet sufficient as a standalone solution for difficult cancer annotation tasks.
+
+## Repository Contents
 
 ```text
-docs/_posts/2026-03-27-zero-shot-cancer-single-cell-foundation-models.md
-```
-
-## Optional: preview locally with Jekyll
-
-If you want local previewing, install Ruby and Bundler, then add a `Gemfile` for GitHub Pages dependencies.
-
-A simple starter `Gemfile` is:
-
-```ruby
-source "https://rubygems.org"
-
-gem "github-pages", group: :jekyll_plugins
-```
-
-Then run:
-
-```bash
-bundle install
-bundle exec jekyll serve --source docs
-```
-
-## Notes
-
-- The post already includes selected figures from your dissertation assets.
-- The content is written in Markdown and uses standard Jekyll front matter.
-- The site uses the supported `minima` theme for a clean research-blog look.
+docs/
+├── _config.yml
+├── index.md
+├── about.md
+├── _posts/
+│   └── 2026-03-27-zero-shot-cell-annotation-cancer-single-cell.md
+└── assets/
