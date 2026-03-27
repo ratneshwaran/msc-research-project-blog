@@ -4,6 +4,9 @@ This repository hosts the GitHub Pages site for my MSc research project on zero-
 
 The project explores whether large pre-trained foundation models can generalise to biologically meaningful prediction tasks without task-specific retraining, with a focus on challenging cancer settings where heterogeneity, domain shift, and limited labelled data make annotation difficult.
 
+## Acknowledgement
+Thank you to Dr Maria Secrier and Dr Shi Pan from Secrier Lab (https://secrierlab.github.io/) at UCL Genetics Institute for supervising me.
+
 ## Project Overview
 
 Single-cell RNA sequencing has become a powerful tool for studying tumour composition, cell identity, and disease progression. However, accurate cell type annotation and state prediction often depend on supervised pipelines that require labelled reference data and may not generalise well across datasets.
