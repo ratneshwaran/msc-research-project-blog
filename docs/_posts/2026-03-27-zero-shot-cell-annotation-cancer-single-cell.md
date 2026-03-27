@@ -148,7 +148,11 @@ The most promising direction, in my view, is not choosing between unimodal and m
 
 ---
 
+### Acknowledgement
+Thank you to Dr Maria Secrier and Dr Shi Pan from Secrier Lab (https://secrierlab.github.io/) at UCL Genetics Institute for supervising me.
+
 ### Links
 
 - **Dissertation PDF:** `/assets/papers/dissertation.pdf`
 - **LinkedIn:** `https://www.linkedin.com/in/ratneshwaran-maheswaran/`
+
