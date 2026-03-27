@@ -1,0 +1,13 @@
+title: Ratnesh's Research Notes
+description: MSc research, machine learning, genomics, and AI for biomedicine.
+theme: minima
+markdown: kramdown
+permalink: /:categories/:title/
+show_excerpts: true
+minima:
+  social_links:
+    - title: GitHub
+      icon: github
+      url: https://github.com/YOUR_GITHUB_USERNAME
+header_pages:
+  - about.md
