@@ -5,7 +5,7 @@ date: 2026-03-27 12:00:00 +0000
 categories: [research, single-cell, genomics, foundation-models]
 ---
 
-This post is based on my MSc research project, which explored whether large pretrained single-cell foundation models can be used in a **strict zero-shot setting** for cancer transcriptomics.
+This post is based on my MSc research project at Secrier Lab at UCL, which explored whether large pretrained single-cell foundation models can be used in a **strict zero-shot setting** for cancer transcriptomics.
 
 The short version is this: I evaluated whether frozen models could help with two practical tasks in cancer single-cell RNA sequencing data without task-specific fine-tuning:
 
